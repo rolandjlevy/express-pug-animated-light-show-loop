@@ -1,0 +1,39 @@
+body {
+  background-color: #000;
+  font-size: 1rem;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.star {
+  --delay: calc(0.05s * var(--d));
+  position: absolute;
+  opacity: 0;
+  font-size: 0.25rem;
+  filter: blur(1px);
+  animation: warp 3s cubic-bezier(0.77, 0, 0.175, 1) var(--delay) infinite alternate;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff99;
+  border-radius: 50%;
+}
+
+@keyframes warp {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(8) translate(calc(0.02vmin * var(--x)), calc(0.02vmin * var(--y)));
+    filter: blur(0.01px);
+  }
+}

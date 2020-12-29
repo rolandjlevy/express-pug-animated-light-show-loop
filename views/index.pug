@@ -1,0 +1,15 @@
+html
+  head
+    title Pug numbers grid animation
+    style
+      include ../public/styles.css
+  body
+    main.wrapper
+      - counter = 1;
+      - size = 75;
+      - range = 3;
+      - for(y=-1*range; y<=1*range; y++)
+        - for(x=-1*range; x<=1*range; x++)
+          div.star(style="--x:" + x*size + "; --y:" + y*size + "; --d:" + counter ) 
+            div.dot
+            - counter++
