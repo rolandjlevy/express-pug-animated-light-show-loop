@@ -15,24 +15,67 @@ body {
 }
 
 .star {
-  --delay: calc(0.005s * var(--d));
+  --delay: calc(0.025s * var(--del));
+  --duration: calc(5s - 0.025s * var(--dur));
   position: absolute;
-  opacity: 0;
   font-size: 0.25rem;
-  filter: blur(1px);
-  animation: warp 4s cubic-bezier(0.77, 0, 0.175, 1) var(--delay) infinite alternate;
+  animation: warp 10s cubic-bezier(0.77, 0, 0.175, 1) var(--delay) infinite alternate;
 }
 
 .dot {
   width: 3px;
   height: 3px;
-  background-color: #ffffff99;
 }
 
 @keyframes warp {
+  0% {
+    opacity: 0.5;
+    transform: rotate(90deg) scale(1, 5) translate(calc(0.05vmin * var(--x)), calc(0.025vmin * var(--y)));
+    background: linear-gradient(var(--col-4), var(--col-1));
+  }
+  10% {
+    opacity: 0.5;
+    transform: rotate(0deg) scale(5, 1) translate(calc(0.025vmin * var(--x)), calc(0.05vmin * var(--y)));
+    background: linear-gradient(var(--col-3), var(--col-2));
+  }
+  20% {
+    opacity: 0.75;
+    transform: rotate(135deg) scale(5) translate(calc(0.05vmin * var(--x)), calc(0.05vmin * var(--y)));
+    background: linear-gradient(var(--col-2), var(--col-3));
+  }
+  35% {
+    opacity: 0.75;
+    transform: rotate(135deg) scale(2) translate(calc(0.05vmin * var(--x)), calc(0.05vmin * var(--y)));
+    background: linear-gradient(var(--col-1), var(--col-4));
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(180deg) scale(5) translate(calc(0.05vmin * var(--x)), calc(0.05vmin * var(--y)));
+    background: linear-gradient(var(--col-2), var(--col-5));
+    filter: brightness(1) hue-rotate(270deg);
+  }
+  60% {
+    opacity: 0.75;
+    transform: rotate(270deg) scale(50, 1) translate(calc(0.0175vmin * var(--x)), calc(0.1vmin * var(--y)));
+    background: linear-gradient(var(--col-3), var(--col-4));
+    filter: brightness(1.25) hue-rotate(180deg);
+  }
+  80% {
+    opacity: 0.75;
+    transform: rotate(270deg) scale(1, 50) translate(calc(0.1vmin * var(--x)), calc(0.0175vmin * var(--y)));
+    background: linear-gradient(var(--col-4), var(--col-1));
+    filter: brightness(1.5) hue-rotate(90deg);
+  }
+  95% {
+    opacity: 1;
+    transform: rotate(360deg) scale(8) translate(calc(0.015vmin * var(--x)), calc(0.015vmin * var(--y)));
+    background: linear-gradient(var(--col-5), var(--col-2));
+    filter: brightness(1.25) hue-rotate(0deg);
+  }
   100% {
     opacity: 1;
-    transform: rotate(360deg) scale(10) translate(calc(0.015vmin * var(--x)), calc(0.015vmin * var(--y)));
-    filter: blur(0.01px);
+    transform: rotate(345deg) scale(8) translate(calc(0.015vmin * var(--x)), calc(0.015vmin * var(--y)));
+    background: linear-gradient(var(--col-2), var(--col-4));
+    filter: brightness(1) hue-rotate(90deg);
   }
 }
