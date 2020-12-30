@@ -1,4 +1,4 @@
-# Animated Light Show Loop 💠
+# Animated Light Show Loop 🚀
 
 Using some basic Maths with Pug and CSS to create animated lights which loop infinitely, changing position, shape, colour and size
 
