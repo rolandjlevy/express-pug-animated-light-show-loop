@@ -9,13 +9,15 @@
     each g in hexRange
       each b in hexRange
         - cols.push(r + g + b)
+- const totalCols = cols.length
+- const colourOffset = Number(cols.length) / Number(unitSize)
 
 html
   head
     title Pug numbers grid animation
     style
       include ../public/styles.css
-  body(style="--unit-size:" + unitSize)
+  body(style=`--unit-size:${unitSize}; --total-cols:${totalCols}; --colour-offset:${colourOffset};`)
     main.wrapper
       - for(x=-1*range; x<=1*range; x++)
         - for(y=-1*range; y<=1*range; y++)
