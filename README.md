@@ -3,9 +3,9 @@
 Using some basic Maths with Pug and CSS to create animated lights which loop infinitely, changing position, shape, colour and size
 
 ### Links 🔗
-- [Play the demo](https://express-pug-grid-animation.rolandjlevy.repl.co)
-- [View source code](https://repl.it/@RolandJLevy/express-pug-animated-grid-of-lights)
-- [See Github repo](https://github.com/rolandjlevy/express-pug-grid-animation)
+- [Play the demo](https://express-pug-animated-light-show-loop.rolandjlevy.repl.co/)
+- [View source code](https://repl.it/@RolandJLevy/express-pug-animated-light-show-loop)
+- [See Github repo](https://github.com/rolandjlevy/express-pug-animated-light-show-loop)
 
 ### Notes 📝
 - This is made with Express, Pug and CSS only. No JavaScript was used
