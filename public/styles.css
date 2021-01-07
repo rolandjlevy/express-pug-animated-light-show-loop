@@ -32,9 +32,9 @@ body {
 @keyframes warp {
   0% {
     opacity: 0.5;
-    transform: rotate(90deg) scale(5, 15) translate(calc(0.0125vmax * var(--x)), calc(0.0125vmax * var(--y)));
+    transform: rotate(90deg) scale(1, 1) translate(calc(0.0125vmax * var(--x)), calc(0.0125vmax * var(--y)));
     background: linear-gradient(var(--col-4), var(--col-1));
-    filter: brightness(1.5) hue-rotate(0deg) saturate(2);
+    filter: brightness(0.1) hue-rotate(0deg) saturate(2);
   }
   15% {
     opacity: 0.75;
@@ -49,44 +49,44 @@ body {
   }
   30% {
     opacity: 1;
-    transform: rotate(90deg) scale(30, 15) translate(calc(0.0125vmax * var(--x)), calc(0.0125vmax * var(--y)));
+    transform: rotate(90deg) scale(30, 15) translate(calc(0.0125vmax * var(--x)), calc(0.025vmax * var(--y)));
     background: linear-gradient(var(--col-3), var(--col-2));
   }
   40% {
     opacity: 1;
     transform: rotate(135deg) scale(5) translate(calc(0.025vmax * var(--x)), calc(0.025vmax * var(--y)));
     background: linear-gradient(var(--col-1), var(--col-4));
-    filter: brightness(1.25) hue-rotate(180deg);
+    filter: brightness(1.25) hue-rotate(180deg) saturate(1);
   }
   50% {
     opacity: 1;
-    transform: rotate(180deg) scale(15) translate(calc(0.025vmax * var(--x)), calc(0.025vmax * var(--y)));
+    transform: rotate(180deg) scale(15) translate(calc(0.0125vmax * var(--x)), calc(0.0125vmax * var(--y)));
     background: linear-gradient(var(--col-2), var(--col-5));
     filter: brightness(1) hue-rotate(270deg) saturate(1);
   }
   60% {
     opacity: 1;
-    transform: rotate(270deg) scale(50, 1) translate(calc(0.0175vmax * var(--x)), calc(0.1vmax * var(--y)));
+    transform: rotate(270deg) scale(50, 1) translate(calc(0.0125vmax * var(--x)), calc(0.1vmax * var(--y)));
     background: linear-gradient(var(--col-3), var(--col-4));
-    filter: brightness(1.25) hue-rotate(180deg);
+    filter: brightness(1.25) hue-rotate(180deg) saturate(1);
   }
   80% {
     opacity: 1;
-    transform: rotate(270deg) scale(1, 150) translate(calc(0.1vmax * var(--x)), calc(0.0175vmax * var(--y)));
+    transform: rotate(315deg) scale(1, 150) translate(calc(0.1vmax * var(--x)), calc(0.0125vmax * var(--y)));
     background: linear-gradient(var(--col-4), var(--col-1));
-    filter: brightness(1.5) hue-rotate(90deg);
+    filter: brightness(1.5) hue-rotate(90deg) saturate(1);
   }
   90% {
     opacity: 1;
-    transform: rotate(360deg) scale(50) translate(calc(0.005vmin * var(--x)), calc(0.015vmin * var(--y)));
+    transform: rotate(360deg) scale(50) translate(calc(0.005vmax * var(--x)), calc(0.005vmax * var(--y)));
     background: linear-gradient(var(--col-5), var(--col-2));
-    filter: brightness(1.25) hue-rotate(0deg);
+    filter: brightness(1.25) hue-rotate(0deg) saturate(1);
   }
   100% {
     opacity: 1;
-    transform: rotate(345deg) scale(10) translate(calc(0.015vmin * var(--x)), calc(0.015vmin * var(--y)));
+    transform: rotate(345deg) scale(10) translate(calc(0.015vmax * var(--x)), calc(0.015vmax * var(--y)));
     background: linear-gradient(var(--col-2), var(--col-4));
-    filter: brightness(1) hue-rotate(90deg);
+    filter: brightness(1) hue-rotate(90deg) saturate(1);
     border-radius: 100%;
   }
 }
